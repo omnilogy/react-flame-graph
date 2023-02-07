@@ -6,7 +6,7 @@ import { minWidthToDisplay, rowHeight } from './constants';
 // Extend PureComponent to avoid rendering more than once per row.
 // This isn't always important,
 // But in this case it is because these rows are somewhat expensive.
-export default class ItemRenderer {
+export default class ItemRenderer extends React.Component {
   render() {
     const { data: itemData, index, style } = this.props;
 

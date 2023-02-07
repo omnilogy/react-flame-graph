@@ -1,11 +1,9 @@
 
 import React from 'react';
-// import { FixedSizeList as List } from 'react-window';
+import { FixedSizeList as List } from 'react-window';
 import memoize from 'memoize-one';
 import ItemRenderer from './ItemRenderer';
 import { rowHeight } from './constants';
-
-
 
 
 export default class FlameGraph extends React.Component {
@@ -94,18 +92,16 @@ export default class FlameGraph extends React.Component {
     );
 
     return (
-      // <List
-      //   height={height}
-      //   innerTagName="svg"
-      //   itemCount={data.height}
-      //   itemData={itemData}
-      //   itemSize={rowHeight}
-      //   width={width}
-      // >
-      <div>
+      <List
+        height={height}
+        innerTagName="svg"
+        itemCount={data.height}
+        itemData={itemData}
+        itemSize={rowHeight}
+        width={width}
+      >
         {ItemRenderer}
-      </div>
-      // </List>
+      </List>
     );
   }
 }
