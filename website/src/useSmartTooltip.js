@@ -1,4 +1,3 @@
-/** @flow */
 
 import { useLayoutEffect, useRef } from 'react';
 
@@ -7,9 +6,6 @@ const TOOLTIP_OFFSET = 4;
 export default function useSmartTooltip({
   mouseX,
   mouseY,
-}: {
-  mouseX: number,
-  mouseY: number,
 }) {
   // $FlowFixMe Flow generics syntax causes a compilation error with the current Babel version
   const ref = useRef(null);

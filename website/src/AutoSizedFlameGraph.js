@@ -1,5 +1,3 @@
-/** @flow */
-
 import React, { Fragment, useRef, useState } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { FlameGraph } from 'react-flame-graph';
@@ -7,7 +5,7 @@ import useSmartTooltip from './useSmartTooltip';
 
 import styles from './AutoSizedFlameGraph.module.css';
 
-function getMousePos(relativeContainer, mouseEvent: SyntheticMouseEvent<*>) {
+function getMousePos(relativeContainer, mouseEvent) {
   if (relativeContainer !== null) {
     const rect = relativeContainer.getBoundingClientRect();
     const mouseX = mouseEvent.clientX - rect.left;

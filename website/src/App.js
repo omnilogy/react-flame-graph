@@ -1,5 +1,3 @@
-/** @flow */
-
 import React, { Fragment } from 'react';
 import AutoSizedFlameGraph from './AutoSizedFlameGraph';
 import ChartDataLoader from './ChartDataLoader';

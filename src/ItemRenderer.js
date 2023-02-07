@@ -1,21 +1,12 @@
-/** @flow */
 
-import type { ItemData } from './types';
-
-import React, { PureComponent } from 'react';
+import React from 'react';
 import LabeledRect from './LabeledRect';
 import { minWidthToDisplay, rowHeight } from './constants';
-
-type Props = {|
-  data: ItemData,
-  index: number,
-  style: Object,
-|};
 
 // Extend PureComponent to avoid rendering more than once per row.
 // This isn't always important,
 // But in this case it is because these rows are somewhat expensive.
-export default class ItemRenderer extends PureComponent<Props, void> {
+export default class ItemRenderer {
   render() {
     const { data: itemData, index, style } = this.props;
 

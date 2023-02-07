@@ -1,6 +1,3 @@
-/** @flow */
-
-import type { ChartData, ChartNode, RawData } from './types';
 
 import { backgroundColorGradient, colorGradient } from './constants';
 
@@ -19,7 +16,7 @@ function getNodeColor(value, maxValue) {
   ];
 }
 
-export function transformChartData(rawData: RawData): ChartData {
+export function transformChartData(rawData) {
   let uidCounter = 0;
 
   const maxValue = rawData.value;
@@ -28,10 +25,10 @@ export function transformChartData(rawData: RawData): ChartData {
   const levels = [];
 
   function convertNode(
-    sourceNode: RawData,
-    depth: number,
-    leftOffset: number
-  ): ChartNode {
+    sourceNode,
+    depth,
+    leftOffset
+  ) {
     const {
       backgroundColor,
       children,

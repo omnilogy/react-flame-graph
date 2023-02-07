@@ -36,9 +36,7 @@
     "dist"
   ],
   "scripts": {
-    "precommit": "flow && lint-staged",
     "prettier": "prettier --write '**/*.{js,json,css}'",
-    "flow": "flow check --max-warnings=0 src && flow check website",
     "linc": "lint-staged",
     "lint": "eslint '**/*.js'",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
@@ -58,7 +56,6 @@
     "**/*.js": "eslint --max-warnings 0"
   },
   "dependencies": {
-    "flow-bin": "^0.118.0",
     "memoize-one": "^3.1.1",
     "react-window": "^1"
   },
@@ -76,7 +73,6 @@
     "eslint-config-react-app": "^2.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
-    "eslint-plugin-flowtype": "^2.47.1",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^5",
     "eslint-plugin-node": "^6.0.1",
